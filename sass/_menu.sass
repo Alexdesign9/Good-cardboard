@@ -1,0 +1,130 @@
+.menu
+	display: flex
+	justify-content: center
+	align-items: center
+	height: 44px
+	background-color: #373737
+	&-content
+		
+		display: flex
+	&-item
+		padding-left: 15px
+		padding-right: 15px
+		height: 44px
+		display: flex
+		justify-content: center
+		align-items: center
+		border-right: 1px solid rgba(#fff, 0.2)
+		&:hover
+			background-color: rgba(#fff, 0.2)
+		a
+			text-decoration: none
+		&-text
+			height: 44px
+			display: flex
+			justify-content: center
+			align-items: center
+			color: #fff
+			font-size: 12px
+			font-weight: 400
+			line-height: 22px
+			text-transform: uppercase
+			
+		&-last
+			border-right: none
+
+	&-link
+		z-index: 9
+		display: none
+		width: 35px
+		height: 35px
+		border-radius: 50%
+		background-color: #fff
+		box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.4)
+		position: absolute
+		top: 18px
+		left: 15px
+
+		span
+			display: block
+			width: 18px
+			height: 2px
+			background-color: #333
+			position: absolute
+			left: 50%
+			margin-left: -9px
+			top: 50%
+			margin-top: -1px
+		span:before
+			transition: all 0.2s
+			content: ''
+			display: block
+			width: 18px
+			height: 2px
+			background-color: #333
+			position: absolute
+			left: 50%
+			margin-left: -9px
+			top: 50%
+			margin-top: -6px
+		span:after
+			transition: all 0.2s
+			content: ''
+			display: block
+			width: 18px
+			height: 2px
+			background-color: #333
+			position: absolute
+			left: 50%
+			margin-left: -9px
+			top: 50%
+			margin-top: 4px
+		&_active 
+			position: fixed
+			span
+				background-color: transparent
+				&:before
+					transform: rotate(135deg)
+					margin-top: 0
+				&:after
+					transform: rotate(-135deg)
+					margin-top: 0
+
+	&_mobile
+		z-index: 3
+		background-color: #fff
+		position: fixed
+		width: 100vw
+		height: 100vh
+		transition: all 0.5s
+		display: flex
+		justify-content: center
+		align-items: center
+		left: -100vw
+		&_active
+			left: 0
+		ul
+			list-style: none
+			padding: 0
+			text-align: center
+			li
+				width: 100vw
+			a
+				display: block
+				width: 100vw
+				line-height: 3
+				font-weight: 100
+				letter-spacing: 4px
+				color: #000
+				text-decoration: none
+				transition: all 0.2s
+				text-transform: uppercase
+
+	
+
+
+		
+
+
+
+

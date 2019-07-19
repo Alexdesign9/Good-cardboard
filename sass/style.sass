@@ -1,0 +1,163 @@
+@import 'variable'
+body
+	font-family: 'Roboto', sans-serif
+.header
+	padding: 15px 0
+ background-color: #fff
+ &-logo
+ 	background: url(../img/header_logo.png) center no-repeat
+ 	background-size: 100%
+ 	width: 191px
+ 	height: 61px
+
+	&__phone
+		font-size: 22px
+		font-weight: 500
+		color: #373737
+		margin-right: 13px
+		&s
+			display: flex
+
+		&:first-child
+			border-right: 1px solid #cfcfd0
+			padding-right: 13px
+
+	
+.button
+	
+	background-color: #ff8d00
+	border: 1px solid transparent
+	border-radius: 5px
+	color: #fff
+	font-size: 14px
+	font-weight: 500
+	padding: 13px 22px
+	&:hover
+		background-color: lighten(#ff8d00, 5)
+		cursor: pointer
+	&-o
+		background-color: transparent
+		color: #373737
+		border: 1px solid rgba(#373737, 0.5)
+		&:hover
+			background-color: lighten(#ff8d00, 5)
+			color: #fff
+			border: 1px solid transparent
+			cursor: pointer
+
+
+	&_big
+		padding-top: 20px
+		padding-bottom: 20px
+		vertical-align: middle
+img
+	vertical-align: middle
+
+
+	
+.phone_icon
+	width: 20px
+	height: 20px
+	vertical-align: middle
+.header-contacts
+	display: flex
+	justify-content: flex-end
+	align-items: center
+.section
+	&-title
+		font-size: 27px
+		font-weight: 700
+		text-transform: uppercase
+		text-align: center
+
+		&::after
+			content: ''
+			display: block
+			margin-top: 12px
+			height: 6px
+			background: url(../img/line.png) center no-repeat
+
+@keyframes move
+	from
+		transform: rotateY(-90deg)
+		opacity: 0
+		margin-bottom: -250px
+	to
+		opacity: 1
+		margin-bottom: 0
+		
+
+.animate
+	animation-name: move
+	animation-delay: 0.4s
+	animation-duration: 1s
+
+.slider-arrow
+	position: absolute
+	top: 0
+	height: 100%
+	width: 22px
+	
+	z-index: 99
+	&_prod
+		border: 1px solid $color-active
+	&:hover
+		cursor: pointer
+	&_right2
+		right: 0
+		
+	&_right1
+		right: 0
+		background: transparent url(../img/arrow_right.png) center no-repeat
+		&:hover
+			right: 0
+			background: transparent url(../img/arrow_right.png) center no-repeat
+
+	&_right
+		right: 0
+		background: transparent url(../img/arrow_right.png) center no-repeat
+		&:hover
+			background: $color-active url(../img/arrow_right_active.png) center no-repeat
+	&_left2
+		left: 0
+		
+	&_left1
+		left: 0
+		background: transparent url(../img/arrow_left.png) center no-repeat
+		&:hover
+			left: 0
+			background: transparent url(../img/arrow_left.png) center no-repeat
+	&_left
+		left: 0
+		background: transparent url(../img/arrow_left.png) center no-repeat
+		&:hover
+			background: $color-active url(../img/arrow_left_active.png) center no-repeat
+
+.dark-bg
+	position: relative
+	z-index: 2
+	/*Затемнение фона*/
+	&::before
+	 content: ''
+	 display: block
+	 position: absolute
+	 left: 0
+	 top: 0
+	 width: 100%
+	 height: 100%
+	 background-color: rgba(0, 0, 0, 0.6)
+	 z-index: -1
+
+
+@import 'reset'
+@import 'menu'
+@import 'main'
+@import 'modal'
+@import 'features'
+@import 'products'
+@import 'production'
+@import 'feedback'
+@import 'offer'
+@import 'contacts'
+@import 'footer'
+@import 'media'
